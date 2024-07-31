@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<style>
+    *{
+        background-color: rgb(26, 24, 24);
+        color: white;
+    }
+
+.profile-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+</style>
+
+<div class="profile-container">
+   
+
+    <div>
+        {{user.username}}
+        {% include 'base/topic_component.html' %}
+    </div>
+    <div>
+       {{user.username}}
+       {% include 'base/feed_component.html' %}
+
+    </div>
+    <div>
+        {% include 'base/activity_component.html' %}
+    </div>
+</div>
+
+{% endblock content %}
